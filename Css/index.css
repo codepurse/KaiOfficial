@@ -1,0 +1,114 @@
+body , html {
+    width: 100%;
+    height: 100%;
+	background-color: white;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+
+.navbar {
+    background-color: #143a53;
+    padding: 20px;
+}
+
+.slanted {
+   
+    background-color: #a12b2c;
+    -webkit-transform: perspective(300px) rotateX(-30deg);
+    -o-transform: perspective(300px) rotateX(-30deg);
+    -moz-transform: perspective(300px) rotateX(-30deg);
+    transform: perspective(300px) rotateX(-25deg);
+    -webkit-transform-origin: 0% 50%;
+    -moz-transform-origin: 0% 50%;
+    -o-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    position: absolute;
+    left:0px;
+    top: 0px;
+    width: 350px;
+    height: 180px;
+    border: 0px;
+    z-index: 9;
+}
+
+.imglogo {
+    transform: rotate(-1deg);
+}
+
+.flex-fill {
+    flex:1 1 auto !important;
+  }
+
+.carousel-item {
+    height: calc(100vh - 80px);
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.carousel-indicators li {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+  }
+
+.colimage {
+    height: calc(50vh - 40px);
+    min-height: 300px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-family: Raleway;
+  font-size: 80px;
+  color: white;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-family: Raleway;
+  font-size: 80px;
+  color: white;
+}
+
+.pcoltitle {
+    font-family: sans-serif;
+    font-size:1.3rem;
+    color: white;
+    font-weight: BOLD;
+}
+
+.pcoltitlesub {
+    font-family: sans-serif;
+    font-size: 1rem;
+    color: #9E9E9E;
+}
+
+@media (min-width: 768px ) {
+    .row {
+        position: relative;
+    }
+  
+    .bottom-align-text {
+      position: absolute;
+      bottom: 0;
+      text-align: center;
+      width: 100%;
+      padding-right: 27px;
+    }
+  }

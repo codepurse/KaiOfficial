@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src='Script\jquery-3.3.1.min.js'></script>
+    <link href='Css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href='Css/story.css' rel='stylesheet' type='text/css'>
+    <script src='Script\bootstrap.min.js'></script>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.5.6/plyr.css" />
+    <script src="https://cdn.plyr.io/3.5.6/plyr.polyfilled.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container-fluid " style="padding:0px !important;">
+        <nav class="navbar navbar-expand-lg">
+            <button class="navbar-toggler" data-toggle="navbar-collapse" data-target="#collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="navbar-brand" href="#">
+                <button class="slanted">
+                    <img src="Image/logo.png" class="img-fluid" style="width: 190px;">
+                </button>
+            </nav>
+            <div class="collapse navbar-collapse" id="collapse">
+                <div class="col2 ml-auto">
+                    <ul class="nav navbar-nav">
+                        <li><a class="nav-link btnpackages"
+                                style="margin-right: 20px;color:white;font-family: muli semibold;font-size: 1rem;letter-spacing: -1px;"
+                                href="404.html">HOME</a></li>
+                        <li><a class="nav-link btnpackages"
+                                style="margin-right: 20px;color:white;font-family: muli semibold;font-size: 1rem;letter-spacing: -1px;"
+                                href="404.html">STORIES</a></li>
+                        <li><a class="nav-link btnpackages"
+                                style="margin-right: 20px;color:white;font-family: muli semibold;font-size: 1rem;letter-spacing: -1px;"
+                                href="404.html">UPDATES</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="row" style="margin-top:20px;">
+            <div class="col-lg-12">
+                <div class="pmystory float-right">MY STORY</div>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 2%;margin-right: 2%;">
+            <div class="col-lg-4">
+                <p class="pstorytitle">Lorem ipsum dolor sit amet?</p>
+                <p class="pstorydesc">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco</p>
+                <p class="pstorytitle">Lorem ipsum dolor sit amet?</p>
+                <p class="pstorydesc">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco</p>
+                <p class="pstorytitle">Lorem ipsum dolor sit amet?</p>
+                <p class="pstorydesc">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco</p>
+            </div>
+            <div class="col-lg-8">
+                <div class="video-radius" style=" width: auto;border-radius: 20px; overflow: hidden; ">
+                    <video poster="Video/thumbnail7.jpg" id="player" playsinline controls>
+                        <source src="Video/video.mp4" type="video/mp4" style="border-radius: 20px;">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const player = new Plyr('#player');
+</script>
+
+</html>

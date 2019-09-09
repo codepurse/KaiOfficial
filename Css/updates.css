@@ -1,0 +1,43 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+.navbar {
+    background-color: #143a53;
+    padding: 20px;
+}
+
+.slanted {
+    background-color: #a12b2c;
+    -webkit-transform: perspective(300px) rotateX(-30deg);
+    -o-transform: perspective(300px) rotateX(-30deg);
+    -moz-transform: perspective(300px) rotateX(-30deg);
+    transform: perspective(300px) rotateX(-25deg);
+    -webkit-transform-origin: 0% 50%;
+    -moz-transform-origin: 0% 50%;
+    -o-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 350px;
+    height: 180px;
+    border: 0px;
+    z-index: 9;
+}
+
+.imglogo {
+    transform: rotate(-1deg);
+}
+
+.pmonth {
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 4rem;
+    color: #a12b2c;
+    margin-right: 45px;
+}
