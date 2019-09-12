@@ -3,12 +3,55 @@ body, html {
     height: 100%;
     background-color: white;
     scroll-behavior: smooth;
-    overflow: hidden;
+    overflow-x: hidden;
+}
+
+@media only screen and (max-width: 762px) {
+    .slanted {
+        background-color: transparent !important;
+        position: relative;
+        transform: perspective(0px) rotateY(0deg) !important;
+        width: 80px !important;
+        top: 0px;
+        padding: 0px;
+        height: auto !important;
+        margin-top: 20px;
+        margin-left: 100px;
+    }
+}
+
+@media only screen and (max-width:769px) {
+    .pmystory {
+        font-size: 2rem !important;
+        float: left !important;
+        margin-left: 5%;
+        margin-bottom: 10px;
+    }
+    .pstorytitle {
+        font-size: 1.2rem !important;
+    }
+    .pstorydesc {
+        font-size: 1.1rem !important;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container-fluid {
+        max-width: 1600px !important;
+    }
+    .container-fluid {
+        max-height: 900px !important;
+    }
 }
 
 .navbar {
     background-color: #143a53;
     padding: 20px;
+}
+
+.btnhome:hover, .btnstory:hover, .btnupdates:hover {
+    transition: all 0.2s;
+    color: #a12b2c !important;
 }
 
 .slanted {

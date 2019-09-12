@@ -6,6 +6,33 @@ body , html {
     overflow-x: hidden;
 }
 
+@media only screen and (max-width: 762px)  {
+  .slanted {
+    background-color: transparent !important;
+    position: relative;
+    transform: perspective(0px) rotateY(0deg) !important;
+    width:80px !important;
+    top: 0px;
+    padding:0px;
+    height: auto !important;
+    margin-top:20px;
+    margin-left: 100px;
+  }
+}
+
+@media only screen and (max-width: 829px) {
+  .pcarouseltitle {
+    font-size: 1.5rem !important;
+  }
+  .pcarouselcontext {
+    font-size: 0.8rem !important;
+  }
+}
+
+.btnhome:hover, .btnstory:hover, .btnupdate:hover {
+  transition: all 0.2s;
+  color: #a12b2c !important;
+}
 
 .navbar {
     background-color: #143a53;
@@ -13,7 +40,6 @@ body , html {
 }
 
 .slanted {
-   
     background-color: #a12b2c;
     -webkit-transform: perspective(300px) rotateX(-30deg);
     -o-transform: perspective(300px) rotateX(-30deg);
@@ -39,6 +65,18 @@ body , html {
 .flex-fill {
     flex:1 1 auto !important;
   }
+
+.pcarouseltitle {
+  font-family: sans-serif;
+  font-size: 3rem;
+  color: whitesmoke;
+}
+
+.pcarouselcontext {
+  font-family: sans-serif;
+  font-size: 1rem;
+  color: whitesmoke;
+}
 
 .carousel-item {
     height: calc(100vh - 80px);
@@ -99,7 +137,7 @@ body , html {
     color: #9E9E9E;
 }
 
-@media (min-width: 768px ) {
+@media (min-width: 300px ) {
     .row {
         position: relative;
     }
