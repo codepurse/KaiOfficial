@@ -3,6 +3,7 @@ body, html {
   height: 100%;
   background-color: white;
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 990px) {
@@ -11,7 +12,7 @@ body, html {
   }
   .colside {
     position: static !important;
-    left:0 !important;
+    left: 0 !important;
   }
 }
 
@@ -42,6 +43,17 @@ body, html {
   .txtsubscribe {
     width: 100% !important;
   }
+}
+
+#loading {
+  background: url('../Image/loader.gif') no-repeat center center;
+  position: absolute;
+  background-color: black;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999999;
 }
 
 .btnhome:hover, .btnstory:hover, .btnupdate:hover {
@@ -142,6 +154,48 @@ body, html {
   font-size: 1.3rem;
   color: white;
   font-weight: BOLD;
+  width: auto;
+  z-index: 9999999;
+}
+
+.bottom-align-text a {
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.2s;
+  display: inline-block;
+  position: relative;
+  color: white !important;
+  padding-left: 10px;
+}
+
+.bottom-align-text a h3:hover {
+  transition: all 0.2s;
+}
+
+.bottom-align-text a h3:hover {
+  color: #a12b2c !important;
+}
+
+.bottom-align-text a h3:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-top: 10px; 
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+.bottom-align-text a h3:hover:after {
+  opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
 }
 
 .pcoltitlesub {
@@ -183,6 +237,33 @@ body, html {
   background: url(../Image/right.png) no-repeat 97.25% 15px transparent;
   border: 0px;
   border-bottom: 2px solid white;
-  margin-top:-5px;
-  width:300px;
+  margin-top: -5px;
+  width: 300px;
+}
+
+
+.pblogtitle {
+  font-family: Mermaid;
+  font-size: 55px;
+  font-weight: bold;
+  color: #323640;
+  line-height: 1.3em;
+}
+
+.pblogdesc {
+  font-family: hind;
+  font-size: 18px;
+  color: #757575;
+  margin-top: 20px;
+  width:93%;
+}
+
+.pseedetails {
+  font-family: hind;
+  font-weight: bold;
+  font-size: 15px;
+  color: #323640;
+  letter-spacing: 0.5;
+  cursor: pointer;
+  transition: all 0.2s;
 }

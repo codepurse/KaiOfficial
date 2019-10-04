@@ -17,7 +17,7 @@
 </head>
 
 <body>
-
+    <div id="loading"></div>
     <div class="container-fluid maincontainer d-flex flex-column" id="colside"
         style="padding:0px !important;overflow: hidden;">
         <nav class="navbar navbar-expand-md navbar-dark fixed-top">
@@ -114,7 +114,9 @@
                         background-repeat: no-repeat;
                         background-size: cover;transition:all 0.2s;">
                         <div class="bottom-align-text">
-                            <h3 class="pcoltitle">Some Text</h3>
+                            <a href="">
+                                <h3 class="pcoltitle">aaaaaaaaaaaasssssssss</h3>
+                            </a>
                             <h3 class="pcoltitlesub ">May 11, 2019</h3>
                         </div>
                     </div>
@@ -191,9 +193,9 @@
                 <p class="psubscribe">Sign up to our newsletter</p>
                 <input type="text" class="txtsubscribe" value="Enter email">
             </div>
-            <div class="col-lg-6 col-md-6 text-right" id = "colfooter">
-                <p class="psubscribe" style = "margin-top: 20px;">Follow us</p>
-                <div class="form-inline float-right" id = "formright" style="margin-top: 20px;">
+            <div class="col-lg-6 col-md-6 text-right" id="colfooter">
+                <p class="psubscribe" style="margin-top: 20px;">Follow us</p>
+                <div class="form-inline float-right" id="formright" style="margin-top: 20px;">
                     <img src="Image/facebook.png" style="margin-right: 10px;cursor: pointer;">
                     <img src="Image/youtube.png" style="margin-right: 10px;cursor: pointer;">
                     <img src="Image/instagram.png" style="margin-right: 10px;cursor: pointer;">
@@ -219,16 +221,25 @@
 
     $(window).resize(function () {
         var width = $(window).width();
-        if (width < 411) {
+        if (width < 412) {
             var element = document.getElementById("formright");
             element.classList.remove("float-right");
+            var element = document.getElementById("colfooter");
+            element.classList.remove("text-right");
         }
         else {
+            var element = document.getElementById("colfooter");
+            element.classList.remove("text-right");
             var element = document.getElementById("formright");
             element.classList.add("float-right");
         }
     });
 
+    function hideLoader() {
+        $('#loading').hide("slow");
+    }
+
+    $(window).ready(hideLoader);
 </script>
 
 </html>

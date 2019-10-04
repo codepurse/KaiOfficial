@@ -87,9 +87,9 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <nav class="navbar-brand" href="#">
-                    <button class="slanted">
-                            <img src="Image/logo.png" class="img-fluid imglogo" style="width: 190px;">
-                        </button>
+                <button class="slanted">
+                    <img src="Image/logo.png" class="img-fluid imglogo" style="width: 190px;">
+                </button>
             </nav>
             <div class="collapse navbar-collapse" id="collapse">
                 <div class="col2 ml-auto">
@@ -727,10 +727,44 @@
             </div>
         </div>
     </div>
+    <div class="container-fluid footer1"
+        style="background-color: #143a53;padding:5px 50px;z-index:9999999999999;padding-bottom: 20px;margin-top: 5  0px;">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6">
+                <p class="psubscribe">Sign up to our newsletter</p>
+                <input type="text" class="txtsubscribe" value="Enter email">
+            </div>
+            <div class="col-lg-6 col-md-6 text-right" id="colfooter">
+                <p class="psubscribe" style="margin-top: 20px;">Follow us</p>
+                <div class="form-inline float-right" id="formright" style="margin-top: 20px;">
+                    <img src="Image/facebook.png" style="margin-right: 10px;cursor: pointer;">
+                    <img src="Image/youtube.png" style="margin-right: 10px;cursor: pointer;">
+                    <img src="Image/instagram.png" style="margin-right: 10px;cursor: pointer;">
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="Script/jquery.film_roll.js"></script>
     <script src="Script/index.js"></script>
     <script src="Script/calendar.js"></script>
 </body>
+<script>
+    $(window).resize(function () {
+        var width = $(window).width();
+        if (width < 412) {
+            var element = document.getElementById("formright");
+            element.classList.remove("float-right");
+            var element = document.getElementById("colfooter");
+            element.classList.remove("text-right");
+        }
+        else {
+            var element = document.getElementById("colfooter");
+            element.classList.add("text-right");
+            var element = document.getElementById("formright");
+            element.classList.add("float-right");
+        }
+    });
+</script>
 
 </html>

@@ -116,3 +116,28 @@ body, html {
 .plyr--full-ui input[type=range] {
     color: #a12b2c !important;
 }
+
+.psubscribe {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    margin-right: 10px;
+  }
+  
+  .txtsubscribe {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 1rem;
+    border: 0px;
+    padding: 10px 0px;
+    outline: none;
+    background: url(../Image/right.png) no-repeat 97.25% 15px transparent;
+    border: 0px;
+    border-bottom: 2px solid white;
+    margin-top:-5px;
+    width:300px;
+  }
+  

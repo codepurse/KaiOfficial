@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href='Css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <script src='Script\jquery-3.3.1.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <link href='Css/index.css' rel='stylesheet' type='text/css'>
+    <script src='Script\bootstrap.min.js'></script>
+    <link rel="shortcut icon" type="image/x-icon" href="Image/logotab.ico" />
+    <title>Kai Zotto Official Website</title>
+</head>
+
+<body>
+
+    <div class="container-fluid maincontainer d-flex flex-column" id="colside"
+        style="padding:0px !important;overflow: hidden;">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="navbar-brand" href="#">
+                <button class="slanted">
+                    <img src="Image/logo.png" class="img-fluid" style="width: 190px;">
+                </button>
+            </nav>
+            <div class="collapse navbar-collapse" id="collapse">
+                <div class="col2 ml-auto">
+                    <ul class="nav navbar-nav">
+                        <li><a class="nav-link btnhome"
+                                style="margin-right: 20px;color:white;font-family: muli semibold;font-size: 1rem;letter-spacing: -1px;"
+                                href="index.html">HOME</a></li>
+                        <li><a class="nav-link btnstory"
+                                style="margin-right: 20px;color:white;font-family: muli semibold;font-size: 1rem;letter-spacing: -1px;"
+                                href="story.html">STORIES</a></li>
+                        <li><a class="nav-link btnupdate"
+                                style="margin-right: 20px;color:white;font-family: muli semibold;font-size: 1rem;letter-spacing: -1px;"
+                                href="updates.html">UPDATES</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="row" style="margin-top:80px;">
+            <div class="col-lg-7 colimagefix" style="position:fixed;padding:0px;">
+                <img src="Image/03.png" style="height: 100vh;width: 100%;">
+            </div>
+            <div class="col-lg-5 colside" id="colside" style="padding:0px;position:relative;left:58.5%;">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="pblogtitle">Lorem ipsum dolor sit amet</p>
+                        <div class="row align align-items-center" style="margin-top:10px;">
+                            <div class="col-lg-12" id="colside">
+                                <hr
+                                    style="border:0px;background-color: #E0E0E0;width:80%;height:2px;margin: 0 0 !important;text-align: left !important;">
+                                <p class="pblogdesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                                    aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                    deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing
+                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                    commodo
+                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid footer1"
+        style="background-color: #143a53;padding:5px 50px;z-index:9999999999999;padding-bottom: 20px;position:absolute;">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6">
+                <p class="psubscribe">Sign up to our newsletter</p>
+                <input type="text" class="txtsubscribe" value="Enter email">
+            </div>
+            <div class="col-lg-6 col-md-6 text-right" id="colfooter">
+                <p class="psubscribe" style="margin-top: 20px;">Follow us</p>
+                <div class="form-inline float-right" id="formright" style="margin-top: 20px;">
+                    <img src="Image/facebook.png" style="margin-right: 10px;cursor: pointer;">
+                    <img src="Image/youtube.png" style="margin-right: 10px;cursor: pointer;">
+                    <img src="Image/instagram.png" style="margin-right: 10px;cursor: pointer;">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var scrollCtr = 0;
+    $(window).bind('scroll', function () {
+        if ($(window).scrollTop() >= $('#colside').offset().top + $('#colside').outerHeight() - window.innerHeight - 1) {
+            $(".footer1").css("visibility", "visible");
+            $(".colimagefix").css("position", "absolute");
+            $(".colimagefix").css("bottom", "0%");
+            $(".colimagefix").css("left", "-0.5%");
+        }
+        else {
+            $(".footer1").css("visibility", "hidden");
+            $(".colimagefix").css("position", "fixed");
+        }
+    });
+
+    $(window).resize(function () {
+        var width = $(window).width();
+        if (width < 412) {
+            var element = document.getElementById("formright");
+            element.classList.remove("float-right");
+            var element = document.getElementById("colfooter");
+            element.classList.remove("text-right");
+        }
+        else {
+            var element = document.getElementById("colfooter");
+            element.classList.remove("text-right");
+            var element = document.getElementById("formright");
+            element.classList.add("float-right");
+        }
+    });
+
+</script>
+
+</html>

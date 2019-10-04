@@ -1,0 +1,2 @@
+[2019-10-01 07:12:54] production.ERROR: No Database connection yet in VoyagerServiceProvider loadAuth()  
+[2019-10-01 07:15:08] production.ERROR: No Database connection yet in VoyagerServiceProvider loadAuth()  
