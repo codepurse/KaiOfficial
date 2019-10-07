@@ -10,56 +10,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
-    <link href='Css/index.css' rel='stylesheet' type='text/css'>
+    <link href='Css/index1.css' rel='stylesheet' type='text/css'>
     <script src='Script\bootstrap.min.js'></script>
     <link rel="shortcut icon" type="image/x-icon" href="Image/logotab.ico" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     <title>Kai Zotto Official Website</title>
 </head>
-<style>
-    .screen {
-        background: url('Image/loader.gif') no-repeat center center;
-        position: absolute;
-        background-color: black;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        z-index: 99999999999999;
-    }
-
-    @keyframes shutdown {
-  0% {
-    opacity: 0;
-  }
-  8%, 46% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-    opacity: 1;
-  }
-  50%, 100% {
-    -webkit-transform: scale(1, 0.02);
-            transform: scale(1, 0.02);
-    opacity: 0.8;
-    background-image: none;
-  
-  }
-  55%, 99% {
-    -webkit-transform: scale(0, 0);
-            transform: scale(0, 0);
-             
-    opacity: 0.3;
-  }
-}
-</style>
 
 <body>
-    <section class="screen">
-        <div class="content">
-            <!-- [FS] NOTE: This is can be treated also as normal web page and containg normal content -->
-        </div>
-    </section>
-
-    <button id="switcher-tv">Turn on/off</button>
+    <div id="loading"></div>
     <div class="container-fluid maincontainer d-flex flex-column" id="colside"
         style="padding:0px !important;overflow: hidden;">
         <nav class="navbar navbar-expand-md navbar-dark fixed-top">
@@ -278,11 +237,19 @@
     });
 
     window.onload = function () {
-        
-        $('.screen').css("animation", "shutdown 3s");
-        $('body').css("overflow", "visible");
-        $('html').css("overflow", "visible");
+        $('#loading').hide("slow");
+        $('body').css("overflow","visible");
+        $('html').css("overflow","visible");
+    }
 
+    var myvar;
+
+    function preloader(){
+        myvar = setTimeout(showPage, 1500);
+    }
+
+    function showPage() {
+        
     }
 </script>
 
