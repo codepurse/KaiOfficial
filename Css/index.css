@@ -53,7 +53,8 @@ body, html {
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: 9999999;
+  z-index: 99999999;
+  transition: 0.5s all linear;
 }
 
 .btnhome:hover, .btnstory:hover, .btnupdate:hover {
@@ -241,13 +242,27 @@ body, html {
   width: 300px;
 }
 
+.pcount {
+  font-family: Montserrat;
+  font-weight: bold;  
+  font-size: 1.2rem;
+  color: #a12b2c;
+}
 
 .pblogtitle {
-  font-family: Mermaid;
-  font-size: 55px;
+  font-family: Montserrat;
+  font-size: 40px;
   font-weight: bold;
   color: #323640;
   line-height: 1.3em;
+  margin-top: -5px;
+}
+
+.pdate {
+  font-family: Montserrat medium;
+  font-size: 0.9rem;
+  color: #757575;
+  margin-top: -5px;
 }
 
 .pblogdesc {
